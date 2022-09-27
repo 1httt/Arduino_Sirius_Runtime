@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="flowchart" version="12.0.0.2017041100">
+  <ownedViewpoints name="Flowchart Specification" modelFileExtension="flow">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Flowchart Diagram" domainClass="flowcharts::FlowChart" enablePopupBars="true">
+      <metamodel href="http://www.example.org/flowcharts#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="StepNode" domainClass="flowcharts::Step">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelPosition="node" resizeKind="NSEW" shape="dot">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="NextStepEdge" sourceMapping="//@ownedViewpoints[name='Flowchart%20Specification']/@ownedRepresentations[name='Flowchart%20Diagram']/@defaultLayer/@nodeMappings[name='StepNode']" targetMapping="//@ownedViewpoints[name='Flowchart%20Specification']/@ownedRepresentations[name='Flowchart%20Diagram']/@defaultLayer/@nodeMappings[name='StepNode']" targetFinderExpression="feature:next">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="flowchart.Services"/>
+  </ownedViewpoints>
+</description:Group>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="FSM" version="12.0.0.2017041100">
+  <ownedViewpoints name="fsmSpecification" modelFileExtension="statemachine">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="fsm Diagram" domainClass="stateMachine::FSM" enablePopupBars="true">
+      <metamodel href="http://www.example.org/stateMachine#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="StateNode" domainClass="stateMachine::State">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="state" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="TransitionEdge" sourceMapping="//@ownedViewpoints[name='fsmSpecification']/@ownedRepresentations[name='fsm%20Diagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetMapping="//@ownedViewpoints[name='fsmSpecification']/@ownedRepresentations[name='fsm%20Diagram']/@defaultLayer/@nodeMappings[name='StateNode']" targetFinderExpression="feature:transfer">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="FSM.Services"/>
+  </ownedViewpoints>
+</description:Group>
